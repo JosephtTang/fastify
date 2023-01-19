@@ -1,0 +1,19 @@
+version: "3"
+services:
+  node:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8500:3000"
+    volumes:
+      - ./:/app
+#     networks:
+#       - backend
+#     extra_hosts:
+#       - "host.docker.internal:host-gateway"
+    # expose:
+    #   - "9003"
+# networks:
+#   backend:
+#     driver: bridge
